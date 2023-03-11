@@ -30,7 +30,7 @@ loginForm.addEventListener('submit', async (e) => {
     }
     
     if (email === "maqdadfadhil@gmail.com", password === "Maqdad2007") {
-        window.location.href = "file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/MainSiteAfterLogin.html";
+        window.location.href = "https://al-kuran.github.io/MainSiteAfterLogin.html";
     }
     if (email === "admin@admin.com", password === "Admin") {
         window.location.href = "file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/Admin.html";
