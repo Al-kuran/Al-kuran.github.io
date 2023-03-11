@@ -1,0 +1,5 @@
+				if (emailValue === "example@example.com" && passwordValue === "password") {
+					window.location.href = "https://www.youtube.com";
+				} else {
+					alert("Invalid email or password. Please try again.");
+				}

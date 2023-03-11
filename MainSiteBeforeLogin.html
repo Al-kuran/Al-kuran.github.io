@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		header {
+			background-image: url("background.png");
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+        .box-behind {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            width: 80%;
+            height: 90%;
+            background-color: white;
+            opacity: 1;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .line1{
+            position: absolute;
+            top: 12%;
+            left: 73%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            width: 0.1%;
+            height: 5%;
+            background-color: gray;
+            opacity: 0.5;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .line2{
+            position: absolute;
+            top: 12%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            width: 0.1%;
+            height: 5%;
+            background-color: gray;
+            opacity: 0.5;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .line3{
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            width: 0.1%;
+            height: 5%;
+            background-color: gray;
+            opacity: 0.5;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .clickable_text1{
+            position: absolute;
+            top: 12%;
+            left: 82.5%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .clickable_text2{
+            position: absolute;
+            top: 12%;
+            left: 18%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .clickable_text3{
+            position: absolute;
+            top: 12%;
+            left: 62.5%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .clickable_text4{
+            position: absolute;
+            top: 12%;
+            left: 37.5%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-family: 'Tajawal', sans-serif;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        p.my-class1{
+            position: relative;
+            z-index: 2;
+            left: 27%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            font-family: 'Tajawal', sans-serif;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: 'Tajawal';
+            src: url('Tajawal-Regular.ttf');
+        }
+        
+        video {
+            position: absolute;
+            top: 45.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	</style>
+
+    <body>
+        <header>
+            <div class="box-behind"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <a href="file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/Login.html" class="clickable_text1">تسجيل الدخول</a>
+            <a href="file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/MainSite.html" class="clickable_text2">الرئيسي</a>
+            <a href="file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/SignUp.html" class="clickable_text3">انشاء حساب</a>
+            <a href="file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/Login.html" class="clickable_text4">الفيدوهات</a>
+            <p dir="rtl" class="my-class1">تُعَدُّ القراءة والتلاوة من العبادات المهمة في الإسلام,<br>
+            والقرآن الكريم هو كتاب الله الذي أنزله على رسوله محمد صلى الله عليه وسلم.<br>
+            ومن أجل تعلم كيفية تلاوة القرآن وفهم معانيه، نقدم لكم دورة تعليم القرآن الكريم.<br>
+            سوف تتعلمون في هذه الدورة قواعد التجويد والتدبر في الآيات وتحسين قراءتكم وفهمكم لكلمات الله العظيم.<br>
+            نحن نتطلع إلى مساعدتكم في تحقيق هدفكم في تعلم كتاب الله وتطبيق ما تعلمتموه في حياتكم اليومية.</p>
+            
+            <video width="640" height="360" controls>
+                <source src="Quran_for_Kids.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </header>
+    </body>
+</head>
