@@ -17,7 +17,7 @@ loginForm.addEventListener('submit', function(event) {
   } else {
     // If the credentials are incorrect, display an error message
     const errorElement = document.createElement('p');
-    errorElement.textContent = 'Incorrect username or password';
+    errorElement.textContent = 'كلمة السر او الايميل خاطئة';
     loginForm.appendChild(errorElement);
   }
 });
