@@ -1,38 +1,23 @@
+// Get the form element
 const loginForm = document.getElementById('login-form');
 
-loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    
-    try {
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email, password })
-        });
-        
-        const data = await response.json();
-        
-        if (response.ok) {
-            // redirect to main page after successful login
-            window.location.href = '/main-page';
-        } else {
-            alert(data.message);
-        }
-        
-    } catch (error) {
-        console.error(error);
-        alert('كلمة السر خاطئة او الايميل خاطئة');
-    }
-    
-    if (email === "maqdadfadhil@gmail.com", password === "Maqdad2007") {
-        window.location.href = "https://al-kuran.github.io/MainSiteAfterLogin.html";
-    }
-    if (email === "admin@admin.com", password === "Admin") {
-        window.location.href = "file:///C:/Users/fadhl/OneDrive/Desktop/Strange%20Files/website/Admin.html";
-    }
+// Add an event listener for the form submission
+loginForm.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  
+  // Get the username and password values from the form
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  
+  // Check the user's credentials (you would typically do this server-side, but for this example we'll just use some hardcoded values)
+  if (username === 'myusername' && password === 'mypassword') {
+    // If the credentials are correct, redirect the user to the dashboard page
+    window.location.href = '/MainSiteAfterLogin';
+  } else {
+    // If the credentials are incorrect, display an error message
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'Incorrect username or password';
+    loginForm.appendChild(errorElement);
+  }
 });
