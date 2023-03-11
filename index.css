@@ -102,10 +102,10 @@
     text-decoration: none;
     font-size: 24px;
 }
-p.my-class1{
+.my-class1{
     position: relative;
     z-index: 2;
-    left: 27%;
+    left: 30%;
     top: 80%;
     transform: translate(-50%, -50%);
     font-family: 'Tajawal', sans-serif;
