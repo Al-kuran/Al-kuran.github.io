@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 header {
-    src: "img\background.png";
+    background-image: url('/Al-kuran/Al-kuran.github.io/blob/main/Background.jpg?raw=true');
     background-attachment: fixed;
     background-size: 100% 100%;
     height: 100vh;
