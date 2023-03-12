@@ -10,8 +10,13 @@ loginForm.addEventListener('submit', function(event) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   
+  // Generate the authToken using SHA-256 hash function
+  const randomString = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  const authToken = sha256(email + randomString);
 
   if (email === 'myusername@gmail.com' && password === 'mypassword@gmail.com') {
+    // Save the authToken to localStorage
+    localStorage.setItem('authToken', authToken);
 
     window.location.href = '/MainSiteAfterLogin';
   } else {
@@ -34,6 +39,8 @@ loginForm.addEventListener('submit', function(event) {
   }
 
   if (email === 'Abdullah@gmail.com' && password === 'Abdullah1234') {
+    // Save the authToken to localStorage
+    localStorage.setItem('authToken', authToken);
 
     window.location.href = '/MainSiteAfterLogin';
   } else {
