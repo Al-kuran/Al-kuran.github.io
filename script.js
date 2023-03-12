@@ -11,13 +11,13 @@ loginForm.addEventListener('submit', function(event) {
   const password = document.getElementById('password').value;
   
 
-  if (email === 'myusername@gmail.com' && password === 'mypassword@gmail.com') {
+  if (email === 'Admin@gmail.com' && password === 'Admin@gmail.com') {
 
     // Store the user email in localStorage
     localStorage.setItem('userEmail', email);
 
     // Redirect the user to the main site after login
-    window.location.href = '/MainSiteAfterLogin';
+    window.location.href = '/Admin.html';
   } else if (email === 'Abdullah@gmail.com' && password === 'Abdullah1234') {
 
     // Store the user email in localStorage
