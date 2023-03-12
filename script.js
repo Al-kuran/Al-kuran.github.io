@@ -10,38 +10,20 @@ loginForm.addEventListener('submit', function(event) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   
-  // Generate the authToken using SHA-256 hash function
-  const randomString = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-  const authToken = sha256(email + randomString);
 
   if (email === 'myusername@gmail.com' && password === 'mypassword@gmail.com') {
-    // Save the authToken to localStorage
-    localStorage.setItem('authToken', authToken);
 
+    // Store the user email in localStorage
+    localStorage.setItem('userEmail', email);
+
+    // Redirect the user to the main site after login
     window.location.href = '/MainSiteAfterLogin';
-  } else {
+  } else if (email === 'Abdullah@gmail.com' && password === 'Abdullah1234') {
 
-    const errorElement = document.createElement('p');
-    errorElement.textContent = 'كلمة السر او الايميل خاطئة';
-    errorElement.style.fontFamily = "'Tajawal', sans-serif";
-    
+    // Store the user email in localStorage
+    localStorage.setItem('userEmail', email);
 
-    const existingErrorElement = loginForm.querySelector('.error-message');
-    if (existingErrorElement) {
-
-      existingErrorElement.textContent = errorElement.textContent;
-    } else {
-
-      errorElement.classList.add('error-message');
-      loginForm.appendChild(errorElement);
-    }
-    
-  }
-
-  if (email === 'Abdullah@gmail.com' && password === 'Abdullah1234') {
-    // Save the authToken to localStorage
-    localStorage.setItem('authToken', authToken);
-
+    // Redirect the user to the main site after login
     window.location.href = '/MainSiteAfterLogin';
   } else {
 
@@ -62,3 +44,10 @@ loginForm.addEventListener('submit', function(event) {
     
   }
 });
+
+// Check if the user is already logged in
+const userEmail = localStorage.getItem('userEmail');
+if (userEmail) {
+  // Redirect the user to the main site after login
+  window.location.href = '/MainSiteAfterLogin';
+}
