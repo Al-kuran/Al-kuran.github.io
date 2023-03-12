@@ -18,6 +18,18 @@ loginForm.addEventListener('submit', function(event) {
     // If the credentials are incorrect, display an error message
     const errorElement = document.createElement('p');
     errorElement.textContent = 'كلمة السر او الايميل خاطئة';
-    loginForm.appendChild(errorElement);
+    errorElement.style.fontFamily = "'Tajawal', sans-serif";
+    
+    // Check if an error element already exists
+    const existingErrorElement = loginForm.querySelector('.error-message');
+    if (existingErrorElement) {
+      // If an error element already exists, update its text content
+      existingErrorElement.textContent = errorElement.textContent;
+    } else {
+      // If an error element doesn't exist, append the new one
+      errorElement.classList.add('error-message'); // Add a class for future reference
+      loginForm.appendChild(errorElement);
+    }
+    
   }
 });
