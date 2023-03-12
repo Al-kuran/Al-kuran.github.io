@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.box-behind {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    width: 90%;
+    height: 90%;
+    max-width: 400px;
+    max-height: 600px;
+    background-color: white;
+    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.line1{
+    display: none;
+}
+
+.line2{
+    display: none;
+}
+
+.line3{
+    display: none;
+}
+
+.clickable_text1{
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.clickable_text2{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.clickable_text3{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'Tajawal', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.clickable_text4{
+    display: none;
+}
+
+.my-class1{
+    position: relative;
+    z-index: 2;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('Tajawal-Regular.ttf');
+}
+
+video {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
