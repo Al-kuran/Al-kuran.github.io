@@ -5,7 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    
+    <script>
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = "https://al-kuran.github.io/index_mobile.html";
+        }
+    </script>
     <body>
         <header>
             <p dir="rtl" class="my-class1">تُعَدُّ القراءة والتلاوة من العبادات المهمة في الإسلام,<br>
@@ -24,12 +29,10 @@
             <a href="https://al-kuran.github.io/" class="clickable_text2">الرئيسي</a>
             <a href="https://al-kuran.github.io/SignUp.html" class="clickable_text3">انشاء حساب</a>
             <a href="https://al-kuran.github.io/Login.html" class="clickable_text4">الفيدوهات</a>
-            
             <video width="640" height="360" controls>
                 <source src="Quran_for_Kids.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
         </header>
     </body>
 
