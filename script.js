@@ -10,24 +10,46 @@ loginForm.addEventListener('submit', function(event) {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   
-  // Check the user's credentials (you would typically do this server-side, but for this example we'll just use some hardcoded values)
+
   if (email === 'myusername@gmail.com' && password === 'mypassword@gmail.com') {
-    // If the credentials are correct, redirect the user to the dashboard page
+
     window.location.href = '/MainSiteAfterLogin';
   } else {
-    // If the credentials are incorrect, display an error message
+
     const errorElement = document.createElement('p');
     errorElement.textContent = 'كلمة السر او الايميل خاطئة';
     errorElement.style.fontFamily = "'Tajawal', sans-serif";
     
-    // Check if an error element already exists
+
     const existingErrorElement = loginForm.querySelector('.error-message');
     if (existingErrorElement) {
-      // If an error element already exists, update its text content
+
       existingErrorElement.textContent = errorElement.textContent;
     } else {
-      // If an error element doesn't exist, append the new one
-      errorElement.classList.add('error-message'); // Add a class for future reference
+
+      errorElement.classList.add('error-message');
+      loginForm.appendChild(errorElement);
+    }
+    
+  }
+
+  if (email === 'Abdullah@gmail.com' && password === 'Abdullah1234') {
+
+    window.location.href = '/MainSiteAfterLogin';
+  } else {
+
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'كلمة السر او الايميل خاطئة';
+    errorElement.style.fontFamily = "'Tajawal', sans-serif";
+    
+
+    const existingErrorElement = loginForm.querySelector('.error-message');
+    if (existingErrorElement) {
+
+      existingErrorElement.textContent = errorElement.textContent;
+    } else {
+
+      errorElement.classList.add('error-message');
       loginForm.appendChild(errorElement);
     }
     
