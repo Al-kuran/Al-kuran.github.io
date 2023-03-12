@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', function(event) {
   const password = document.getElementById('password').value;
   
   // Check the user's credentials (you would typically do this server-side, but for this example we'll just use some hardcoded values)
-  if (email === 'myusername' && password === 'mypassword') {
+  if (email === 'myusername@gmail.com' && password === 'mypassword@gmail.com') {
     // If the credentials are correct, redirect the user to the dashboard page
     window.location.href = '/MainSiteAfterLogin';
   } else {
